@@ -1,11 +1,11 @@
 +---------------------------------------+          +---------------------------------------+
 |                product                |          |                 item                  |
 +----+-----------------------+----------+          +----+-----------------------+----------+
-| PK | id                	 | IDENTITY | <–––┐  n | PK | id                    | IDENTITY |
-|    | sku               	 | VARCHAR  | 1   └––– | FK | product_id            | INT8     |
-|    | name              	 | VARCHAR  |     ┌––– | FK | order_id              | INT8     |
-|    | price             	 | DECIMAL  |     |  n |    | quantity              | INT      |
-|    | version           	 | INT      |     |    |    | total                 | DECIMAL  |
+| PK | id                    | IDENTITY | <–––┐  n | PK | id                    | IDENTITY |
+|    | sku                   | VARCHAR  | 1   └––– | FK | product_id            | INT8     |
+|    | name                  | VARCHAR  |     ┌––– | FK | order_id              | INT8     |
+|    | price                 | DECIMAL  |     |  n |    | quantity              | INT      |
+|    | version               | INT      |     |    |    | total                 | DECIMAL  |
 |    | creation_datetime     | DATETIME |     |    |    | version               | INT      |
 |    | modification_datetime | DATETIME |     |    |    | creation_datetime     | DATETIME |
 +----+-----------------------+----------+     |    |    | modification_datetime | DATETIME |
@@ -14,8 +14,8 @@
 +---------------------------------------+     |
 |            purchase_order             |     |
 +----+-----------------------+----------+ 1   |
-| PK | id                	 | IDENTITY | <–––┘
-| FK | customer_id       	 | INT8     | ––––┐
+| PK | id                    | IDENTITY | <–––┘
+| FK | customer_id           | INT8     | ––––┐
 |    | order_date            | DATE     | n   |
 |    | version               | INT      |     |
 |    | creation_datetime     | DATETIME |     |
