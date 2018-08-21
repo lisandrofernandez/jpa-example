@@ -60,7 +60,7 @@ public class App {
 
     private static void printProducts() {
         EntityManager manager = emf.createEntityManager();
-        List<Product> products = manager.createQuery("FROM Product", Product.class).getResultList();
+        List<Product> products = manager.createQuery("Select p FROM Product p", Product.class).getResultList();
         System.out.println("*** Products ***");
         for (Product product : products)
             System.out.println(product.getClass() + " ["
@@ -77,7 +77,7 @@ public class App {
 
     private static void printCustomers() {
         EntityManager manager = emf.createEntityManager();
-        List<Customer> customers = manager.createQuery("FROM Customer", Customer.class).getResultList();
+        List<Customer> customers = manager.createQuery("Select c FROM Customer c", Customer.class).getResultList();
         System.out.println("*** Customers ***");
         for (Customer customer : customers)
             System.out.println(customer.getClass() + " ["
@@ -95,7 +95,7 @@ public class App {
     private static void printOrders() {
         System.out.println("*** Orders ***");
         EntityManager manager = emf.createEntityManager();
-        List<PurchaseOrder> orders = manager.createQuery("FROM PurchaseOrder", PurchaseOrder.class).getResultList();
+        List<PurchaseOrder> orders = manager.createQuery("Select o FROM PurchaseOrder o", PurchaseOrder.class).getResultList();
         for (PurchaseOrder order : orders)
             System.out.println(order.getClass() + " ["
                     + "id: " + order.getId() + ", "
@@ -111,7 +111,7 @@ public class App {
     private static void printItems() {
         System.out.println("*** Items ***");
         EntityManager manager = emf.createEntityManager();
-        List<Item> items = manager.createQuery("FROM Item", Item.class).getResultList();
+        List<Item> items = manager.createQuery("Select i FROM Item i", Item.class).getResultList();
         for (Item item : items)
             System.out.println(item.getClass() + " ["
                     + "id: " + item.getId() + ", "
@@ -166,7 +166,7 @@ public class App {
             manager.persist(item1);
             Item item2 = new Item();
             item2.setOrder(order);
-            item2.setProduct(manager.createQuery("FROM Product where sku = :sku",
+            item2.setProduct(manager.createQuery("Select p FROM Product p where p.sku = :sku",
                                                  Product.class)
                                     .setParameter("sku", "bed")
                                     .getSingleResult());
