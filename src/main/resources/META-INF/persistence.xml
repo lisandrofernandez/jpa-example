@@ -10,6 +10,7 @@
         <class>org.lisandro.model.Address</class>
         <class>org.lisandro.model.Customer</class>
         <class>org.lisandro.model.EmailAddress</class>
+        <class>org.lisandro.model.Item</class>
         <class>org.lisandro.model.Product</class>
         <class>org.lisandro.model.PurchaseOrder</class>
     
