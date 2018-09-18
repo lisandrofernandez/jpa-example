@@ -27,7 +27,7 @@ CREATE TABLE product (
     version INT DEFAULT 0,
     creation_datetime DATETIME DEFAULT NOW(),
     modification_datetime DATETIME DEFAULT NOW(),
-    UNIQUE KEY UNIQUET_PRODUCT_SKU (sku)
+    UNIQUE KEY UNIQUE_PRODUCT_SKU (sku)
 );
 
 CREATE TABLE customer (
