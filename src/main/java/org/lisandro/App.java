@@ -42,10 +42,8 @@ public class App {
             createData();
             removeData();
             updateData();
-            System.out.println("");
+            System.out.println();
             printModel();
-        } catch (Exception e) {
-            throw e;
         } finally {
             emf.close();
         }
