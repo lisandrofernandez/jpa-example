@@ -46,7 +46,7 @@ public class Item extends BaseEntity {
     private Integer quantity;
 
     @Column(name = "total")
-    BigDecimal total;
+    private BigDecimal total;
 
     public Product getProduct() {
         return product;
