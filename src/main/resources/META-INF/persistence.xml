@@ -6,25 +6,25 @@
     version="2.2">
 
     <persistence-unit name="my-persistence-unit">
-    
+
         <class>org.lisandro.model.Address</class>
         <class>org.lisandro.model.Customer</class>
         <class>org.lisandro.model.EmailAddress</class>
         <class>org.lisandro.model.Item</class>
         <class>org.lisandro.model.Product</class>
         <class>org.lisandro.model.PurchaseOrder</class>
-    
+
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
             <property name="javax.persistence.jdbc.url"
                       value="jdbc:h2:mem:test;INIT=runscript from '/path/to/jpa-example/src/main/db/init.sql'" />
             <property name="javax.persistence.jdbc.user" value="sa" />
             <property name="javax.persistence.jdbc.password" value="" />
-    
+
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
             <property name="hibernate.hbm2ddl.auto" value="validate" />
         </properties>
-    
+
     </persistence-unit>
 
 </persistence>

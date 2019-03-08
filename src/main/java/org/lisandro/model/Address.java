@@ -42,7 +42,7 @@ public class Address {
     @Id
     @Column(name = "id")
     private Long id;
- 
+
     @Version
     @Column(name = "version")
     private Integer version;
