@@ -46,6 +46,9 @@ public class Customer extends BaseEntity {
     private Address address;
 
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+    private List<EmailAddress> emailAddresses = new ArrayList<>();
+
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private List<PurchaseOrder> orders = new ArrayList<>();
 
     public String getName() {
@@ -70,6 +73,14 @@ public class Customer extends BaseEntity {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public List<EmailAddress> getEmailAddresses() {
+        return emailAddresses;
+    }
+
+    public void setEmailAddresses(List<EmailAddress> emailAddresses) {
+        this.emailAddresses = emailAddresses;
     }
 
     public List<PurchaseOrder> getOrders() {
