@@ -42,7 +42,7 @@ public class Customer extends BaseEntity {
     @Column(name = "birthdate")
     private LocalDate birthDate;
 
-    @OneToOne(mappedBy = "customer", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "customer", fetch = FetchType.EAGER)
     private Address address;
 
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
