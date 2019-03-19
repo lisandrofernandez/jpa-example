@@ -81,7 +81,7 @@ public class App {
             System.out.println(customer.getClass() + " ["
                     + "id: " + customer.getId() + ", "
                     + "name: " + customer.getName() + ", "
-                    + "birth date: " + customer.getBirthDate() + ", "
+                    + "birth date: " + customer.getBirthdate() + ", "
                     + "address: " + customer.getAddress() + ", "
                     + "version: " + customer.getVersion() + ", "
                     + "creation datetime: " + customer.getCreationDateTime() + ", "
@@ -137,7 +137,7 @@ public class App {
             // create customer
             Customer customer = new Customer();
             customer.setName("Saul Hudson");
-            customer.setBirthDate(LocalDate.of(1965, 7, 23));
+            customer.setBirthdate(LocalDate.of(1965, 7, 23));
             manager.persist(customer);
             // create address
             Address address = new Address();

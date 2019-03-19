@@ -40,7 +40,7 @@ public class Customer extends BaseEntity {
     private String name;
 
     @Column(name = "birthdate")
-    private LocalDate birthDate;
+    private LocalDate birthdate;
 
     @OneToOne(mappedBy = "customer", fetch = FetchType.EAGER)
     private Address address;
@@ -59,12 +59,12 @@ public class Customer extends BaseEntity {
         this.name = name;
     }
 
-    public LocalDate getBirthDate() {
-        return birthDate;
+    public LocalDate getBirthdate() {
+        return birthdate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthdate(LocalDate birthdate) {
+        this.birthdate = birthdate;
     }
 
     public Address getAddress() {
